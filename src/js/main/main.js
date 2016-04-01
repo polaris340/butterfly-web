@@ -10,7 +10,6 @@ var MainComponent = React.createClass({
   }
 });
 
-
 app.directive('main', ['reactDirective', function(reactDirective) {
   return reactDirective(MainComponent);
 }]);
