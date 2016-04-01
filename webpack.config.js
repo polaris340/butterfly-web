@@ -17,12 +17,16 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
-        test: /\.scss/,
+        test: /\.scss$/,
         loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader'
       },
       {
         test: require.resolve("react"),
         loader: "expose?React"
+      },
+      {
+        test: /\.html$/,
+        loader: 'ng-cache?prefix=templates/[dir]'
       }
     ]
   }
